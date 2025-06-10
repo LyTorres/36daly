@@ -7,29 +7,33 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Fonte Título Gótica e Corpo Neutro -->
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    /* Modificando o fundo para preto e cinza */
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #000000, #4b0082, #8b0000);
+      background: linear-gradient(135deg, #000000, #808080); /* Preto e cinza */
       background-size: 600% 600%;
       animation: gradientBG 30s ease infinite;
-      color: #e0dcdc;
+      color: #e0dcdc; /* Cor de texto suave */
       overflow-x: hidden;
     }
 
+    /* Título com fonte gótica mais forte */
     h1, h2, h3 {
-      font-family: 'UnifrakturCook', cursive;
-      text-shadow: 2px 2px 4px #000000;
+      font-family: 'Creepster', cursive; /* Fonte gótica */
+      text-shadow: 4px 4px 6px #000000, 0 0 25px #ff0000, 0 0 5px #ff0000; /* Efeito de sombra para destaque */
     }
 
+    /* Animação de fundo */
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
+    /* Efeito de fade-in para o conteúdo */
     .animate-fade-in {
       animation: fadeIn 2s ease-out;
     }
@@ -39,10 +43,14 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Animando morcegos */
     .bat {
       position: absolute;
       top: 20%;
       animation: fly 10s linear infinite;
+      opacity: 0.8;
+      width: 50px;
+      height: 20px;
     }
 
     @keyframes fly {
@@ -50,14 +58,7 @@
       100% { transform: translateX(110vw) scale(1) rotate(360deg); }
     }
 
-    .candle {
-      width: 10px;
-      height: 40px;
-      background: #444;
-      margin: 2rem auto;
-      position: relative;
-    }
-
+    /* Animação de chama */
     .flame {
       width: 10px;
       height: 10px;
@@ -74,24 +75,29 @@
       100% { transform: scale(1.2); opacity: 1; }
     }
 
-    /* Estilo para os morcegos */
-    .bat {
-      width: 50px;
-      height: 20px;
-      left: -50px;
-      animation: fly 10s linear infinite;
+    /* Estilo para links com fundo mais forte */
+    .btn {
+      transition: all 0.3s ease;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .btn:hover {
       opacity: 0.8;
     }
 
-    /* Estilos adicionais para os morcegos */
-    .bat:nth-child(odd) {
-      animation-duration: 12s;
-      animation-delay: 3s;
+    .bg-dark-purple {
+      background-color: #6a0dad;
     }
 
-    .bat:nth-child(even) {
-      animation-duration: 8s;
-      animation-delay: 2s;
+    .bg-dark-red {
+      background-color: #8b0000;
+    }
+
+    .bg-dark-gray {
+      background-color: #2f2f2f;
     }
 
   </style>
@@ -99,7 +105,7 @@
 </head>
 <body class="min-h-screen flex flex-col items-center p-6 relative">
 
-  <!-- Morcego -->
+  <!-- Morcegos -->
   <svg class="bat" viewBox="0 0 50 20" width="50" height="20">
     <path d="M0,10 Q5,0 10,10 T20,10 Q25,0 30,10 T40,10 Q45,0 50,10" fill="black" />
   </svg>
@@ -119,21 +125,22 @@
 
   <main class="text-center mt-10 relative z-10 animate-fade-in">
     <h1 class="text-5xl mb-4 text-red-700">🎂 Aniversário 3.6 Sombrio da Ly🎉</h1>
-    <p class="text-lg md:text-xl mb-8 px-4 text-gray-300 max-w-3xl mx-auto"> <br /><br /><br />
+    <p class="text-lg md:text-xl mb-8 px-4 text-gray-300 max-w-3xl mx-auto">
       🕯️ No dia 30/06, viro a esquina das 36 voltas ao sol — já são 36 invernos nas costas e ainda dançando com o tempo como quem debocha da idade.
       <br /><br />
       Abro aqui minha lista de desejos, porque pedir é de graça e sonhar é meu esporte favorito. Se quiser deixar sua oferenda simbólica pra este novo ciclo, sinta-se invocado.
       <br /><br />
-      Que Exu, com sua gargalhada sábia, retribua em dobro tudo que me desejarem — pro bem ou pro karma. 🔮🔜</p>
+      Que Exu, com sua gargalhada sábia, retribua em dobro tudo que me desejarem — pro bem ou pro karma. 🔮🔜
+    </p>
 
     <div class="grid gap-6 max-w-xl mx-auto">
-      <a href="https://www.udemy.com/course/leanux_design_scrum/?couponCode=ST12MT90625A" target="_blank" class="bg-purple-900 hover:bg-purple-700 transition p-4 rounded-2xl shadow-lg text-gray-100">
+      <a href="https://www.udemy.com/course/leanux_design_scrum/?couponCode=ST12MT90625A" target="_blank" class="btn bg-dark-purple hover:bg-purple-700">
         💡 Curso de UX Design na Udemy
       </a>
-      <a href="https://www.udemy.com/course/web-completo/" target="_blank" class="bg-gray-800 hover:bg-gray-600 transition p-4 rounded-2xl shadow-lg text-gray-100">
+      <a href="https://www.udemy.com/course/web-completo/" target="_blank" class="btn bg-dark-gray hover:bg-gray-600">
         💻 Curso Web Completo na Udemy
       </a>
-      <a href="https://www.udemy.com/course/domine-o-ingles-rapido/" target="_blank" class="bg-red-900 hover:bg-red-700 transition p-4 rounded-2xl shadow-lg text-gray-100">
+      <a href="https://www.udemy.com/course/domine-o-ingles-rapido/" target="_blank" class="btn bg-dark-red hover:bg-red-700">
         🇺🇸 Curso de Inglês Rápido
       </a>
 
@@ -163,7 +170,7 @@
     <div class="w-full flex justify-center">
       <iframe style="border-radius:12px" 
         src="https://open.spotify.com/embed/playlist/72J3Hxu5yewBn8XhvVHFek?utm_source=generator&theme=0" 
-        width="100%" height="152" frameborder="0" allowfullscreen 
+        width="100%" height="152" frameborder="0" allowfullscreen="" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy"></iframe>
     </div>
@@ -183,5 +190,6 @@
       });
     }
   </script>
+
 </body>
 </html>
