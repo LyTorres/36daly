@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Aniversário Gótico 🖤</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonte Título Gótica e Corpo Neutro -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #000000, #4b0082, #8b0000);
+      background-size: 600% 600%;
+      animation: gradientBG 30s ease infinite;
+      color: #e0dcdc;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'UnifrakturCook', cursive;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bat {
+      position: absolute;
+      top: 20%;
+      animation: fly 10s linear infinite;
+    }
+
+    @keyframes fly {
+      0% { transform: translateX(0) scale(1) rotate(0deg); }
+      100% { transform: translateX(110vw) scale(1) rotate(360deg); }
+    }
+
+    .candle {
+      width: 10px;
+      height: 40px;
+      background: #444;
+      margin: 2rem auto;
+      position: relative;
+    }
+
+    .flame {
+      width: 10px;
+      height: 10px;
+      background: orange;
+      border-radius: 50%;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      animation: flicker 0.2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+
+    /* Estilo para os morcegos */
+    .bat {
+      width: 50px;
+      height: 20px;
+      left: -50px;
+      animation: fly 10s linear infinite;
+      opacity: 0.8;
+    }
+
+    /* Estilos adicionais para os morcegos */
+    .bat:nth-child(odd) {
+      animation-duration: 12s;
+      animation-delay: 3s;
+    }
+
+    .bat:nth-child(even) {
+      animation-duration: 8s;
+      animation-delay: 2s;
+    }
+
+  </style>
+
+</head>
+<body class="min-h-screen flex flex-col items-center p-6 relative">
+
+  <!-- Morcego -->
+  <svg class="bat" viewBox="0 0 50 20" width="50" height="20">
+    <path d="M0,10 Q5,0 10,10 T20,10 Q25,0 30,10 T40,10 Q45,0 50,10" fill="black" />
+  </svg>
+  <svg class="bat" viewBox="0 0 50 20" width="50" height="20">
+    <path d="M0,10 Q5,0 10,10 T20,10 Q25,0 30,10 T40,10 Q45,0 50,10" fill="black" />
+  </svg>
+  <svg class="bat" viewBox="0 0 50 20" width="50" height="20">
+    <path d="M0,10 Q5,0 10,10 T20,10 Q25,0 30,10 T40,10 Q45,0 50,10" fill="black" />
+  </svg>
+  <svg class="bat" viewBox="0 0 50 20" width="50" height="20">
+    <path d="M0,10 Q5,0 10,10 T20,10 Q25,0 30,10 T40,10 Q45,0 50,10" fill="black" />
+  </svg>
+
+  <div class="candle">
+    <div class="flame"></div>
+  </div>
+
+  <main class="text-center mt-10 relative z-10 animate-fade-in">
+    <h1 class="text-5xl mb-4 text-red-700">🎂 Aniversário 3.6 Sombrio da Ly🎉</h1>
+    <p class="text-lg md:text-xl mb-8 px-4 text-gray-300 max-w-3xl mx-auto"> <br /><br /><br />
+      🕯️ No dia 30/06, viro a esquina das 36 voltas ao sol — já são 36 invernos nas costas e ainda dançando com o tempo como quem debocha da idade.
+      <br /><br />
+      Abro aqui minha lista de desejos, porque pedir é de graça e sonhar é meu esporte favorito. Se quiser deixar sua oferenda simbólica pra este novo ciclo, sinta-se invocado.
+      <br /><br />
+      Que Exu, com sua gargalhada sábia, retribua em dobro tudo que me desejarem — pro bem ou pro karma. 🔮🔜</p>
+
+    <div class="grid gap-6 max-w-xl mx-auto">
+      <a href="https://www.udemy.com/course/leanux_design_scrum/?couponCode=ST12MT90625A" target="_blank" class="bg-purple-900 hover:bg-purple-700 transition p-4 rounded-2xl shadow-lg text-gray-100">
+        💡 Curso de UX Design na Udemy
+      </a>
+      <a href="https://www.udemy.com/course/web-completo/" target="_blank" class="bg-gray-800 hover:bg-gray-600 transition p-4 rounded-2xl shadow-lg text-gray-100">
+        💻 Curso Web Completo na Udemy
+      </a>
+      <a href="https://www.udemy.com/course/domine-o-ingles-rapido/" target="_blank" class="bg-red-900 hover:bg-red-700 transition p-4 rounded-2xl shadow-lg text-gray-100">
+        🇺🇸 Curso de Inglês Rápido
+      </a>
+
+      <div class="bg-black bg-opacity-70 p-4 rounded-2xl shadow-inner border border-red-900">
+        <p class="text-lg text-gray-300">Ou envie um presente via PIX 💰</p>
+        <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p id="pix-key" class="font-mono bg-gray-900 p-2 rounded text-red-500 break-all">
+            analitorres.pires@gmail.com
+          </p>
+          <div class="flex gap-2">
+            <button onclick="copyPIX()" class="bg-red-700 hover:bg-red-600 text-white px-4 py-2 rounded">
+              Copiar
+            </button>
+            <a href="brcode:00020126360014br.gov.bcb.pix0117analitorres.pires@gmail.com5204000053039865405100.005802BR5920Presente Aniversário6009São Paulo62290525https://chat.openai.com6304B13D" class="bg-purple-800 hover:bg-purple-700 text-white px-4 py-2 rounded" target="_blank">
+              Abrir no banco
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Música do Spotify -->
+  <section class="mt-16 max-w-2xl w-full relative z-10">
+    <h2 class="text-3xl text-center text-red-600 mb-4">🔥 Trilha Sombria</h2>
+    <p class="text-center text-gray-400 mb-4">Toque uma faixa aleatória e entre no clima...</p>
+    <div class="w-full flex justify-center">
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/72J3Hxu5yewBn8XhvVHFek?utm_source=generator&theme=0" 
+        width="100%" height="152" frameborder="0" allowfullscreen 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer class="mt-20 text-sm text-gray-500 relative z-10 italic">
+    Forjado na escuridão com carinho 🕯️
+  </footer>
+
+  <script>
+    function copyPIX() {
+      const pixKey = document.getElementById("pix-key").innerText;
+      navigator.clipboard.writeText(pixKey).then(() => {
+        alert("Chave PIX copiada com sucesso!");
+      }).catch(() => {
+        alert("Não foi possível copiar a chave.");
+      });
+    }
+  </script>
+</body>
+</html>
