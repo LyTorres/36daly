@@ -10,30 +10,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Modificando o fundo para preto e cinza */
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #000000, #808080); /* Preto e cinza */
+      background: linear-gradient(135deg, #000000, #242424);
       background-size: 600% 600%;
       animation: gradientBG 30s ease infinite;
-      color: #e0dcdc; /* Cor de texto suave */
+      color: #e0dcdc;
       overflow-x: hidden;
     }
 
-    /* Título com fonte gótica mais forte */
     h1, h2, h3 {
-      font-family: 'Creepster', cursive; /* Fonte gótica */
-      text-shadow: 4px 4px 6px #000000, 0 0 25px #ff0000, 0 0 5px #ff0000; /* Efeito de sombra para destaque */
+      font-family: 'Creepster', cursive;
+      text-shadow: 4px 4px 6px #000000, 0 0 25px #ff0000, 0 0 5px #530606;
     }
 
-    /* Animação de fundo */
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Efeito de fade-in para o conteúdo */
     .animate-fade-in {
       animation: fadeIn 2s ease-out;
     }
@@ -43,7 +39,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Animando morcegos */
     .bat {
       position: absolute;
       top: 20%;
@@ -58,7 +53,6 @@
       100% { transform: translateX(110vw) scale(1) rotate(360deg); }
     }
 
-    /* Animação de chama */
     .flame {
       width: 10px;
       height: 10px;
@@ -75,7 +69,6 @@
       100% { transform: scale(1.2); opacity: 1; }
     }
 
-    /* Estilo para links com fundo mais forte */
     .btn {
       transition: all 0.3s ease;
       padding: 12px 20px;
@@ -99,7 +92,6 @@
     .bg-dark-gray {
       background-color: #2f2f2f;
     }
-
   </style>
 
 </head>
@@ -133,6 +125,7 @@
       Que Exu, com sua gargalhada sábia, retribua em dobro tudo que me desejarem — pro bem ou pro karma. 🔮🔜
     </p>
 
+    <!-- Lista de desejos -->
     <div class="grid gap-6 max-w-xl mx-auto">
       <a href="https://www.udemy.com/course/leanux_design_scrum/?couponCode=ST12MT90625A" target="_blank" class="btn bg-dark-purple hover:bg-purple-700">
         💡 Curso de UX Design na Udemy
@@ -140,8 +133,8 @@
       <a href="https://www.udemy.com/course/web-completo/" target="_blank" class="btn bg-dark-gray hover:bg-gray-600">
         💻 Curso Web Completo na Udemy
       </a>
-      <a href="https://www.udemy.com/course/domine-o-ingles-rapido/" target="_blank" class="btn bg-dark-red hover:bg-red-700">
-        🇺🇸 Curso de Inglês Rápido
+      <a href="#" onclick="alert('Esse curso eu já ganhei de presente, obrigada! 💝'); return false;" class="btn bg-dark-red line-through cursor-not-allowed opacity-50">
+        🇺🇸 Curso de Inglês Rápido (já ganhei! 💝)
       </a>
 
       <div class="bg-black bg-opacity-70 p-4 rounded-2xl shadow-inner border border-red-900">
