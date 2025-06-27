@@ -178,15 +178,7 @@
       });
     }
 
-    function copyCard() {
-      const text = `Dia 30/06 completo 3.6 voltas no sol 🌒\nQuer me presentear? Veja minha listinha ou mande um PIX!\nLink completo: [https://lytorres.github.io/36daly/]`;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Convite copiado para enviar no WhatsApp!");
-      }).catch(() => {
-        alert("Erro ao copiar o convite.");
-      });
-    }
-
+    
     // Contagem Regressiva
     const countdown = document.getElementById("countdown");
     const targetDate = new Date("2025-06-30T00:00:00").getTime();
